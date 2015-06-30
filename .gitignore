@@ -1,23 +1,33 @@
-# Object files
+aclocal.m4
+autom4te.cache
+autoscan.log
+configure
+configure.scan
+Makefile.in
+.deps/
+.dirstamp
+depcomp
 *.o
-*.ko
-*.obj
-*.elf
-
-# Libraries
-*.lib
-*.a
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+INSTALL
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.h
+config.h.in
+config.log
+config.status
+config.status.lineno
+configure
+configure.lineno
+depcomp
+hello
+install-sh
+missing
+stamp-h?
+src/waitress
+tests/*_tests
+*~
+tests/*.log
+tests/*.trs
+m4/*
