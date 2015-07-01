@@ -1,9 +1,12 @@
+*.la
+*.lo
 aclocal.m4
 autom4te.cache
 autoscan.log
 configure
 configure.scan
 Makefile.in
+src/.libs/
 .deps/
 .dirstamp
 depcomp
