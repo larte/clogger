@@ -4,7 +4,11 @@ clogger
 A simple C logger lib. I wrote this to try to learn autotools and libtool.
 
 
-Defined logging macros for levels Debug, Info, Warn, Error and Fatal. The macros are LOG(LEVEL,format, ...) and LOG_LEVEL(format, ...). The default level is INFO, and FATAL level lines are always printed. Debug level messages will include filename and line.
+Defined logging macros for levels Debug, Info, Warn, Error and Fatal. The macros are LOG(LEVEL,format, ...) and LOG_LEVEL(format, ...). 
+
+* Default level is INFO, Debug lines are omitted
+* FATAL logs are always printed. 
+* Debug level messages will include filename:line information
 
 
 ## Installation
