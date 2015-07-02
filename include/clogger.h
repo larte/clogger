@@ -26,24 +26,11 @@ typedef enum{
     Fatal = 5
 }LogLevel;
 
-const char* clogger_headers[] = {
-            "",
-            "[DEBUG]",
-            "[INFO ]",
-            "[WARN ]",
-            "[ERROR]",
-            "[FATAL]" };
-
-const char* clogger_colors[] = {
-        "",
-        "\033[1;32;48m",
-        "\033[1;34;48m",
-        "\033[1;33;48m",
-        "\033[1;35;48m",
-        "\033[1;31;48m" };
 
 #define CLOGGER_RESET "\033[0m "
 
+
+void clogger_set_output(FILE *fd);
 
 void clogger_set_colorize();
 void clogger_unset_colorize();

@@ -1,7 +1,7 @@
-check_PROGRAMS = clogger_tests
+check_PROGRAMS = check_clogger
 
-clogger_tests_SOURCES = clogger_tests.c
-clogger_tests_CFLAGS = -I./../src -I./../include -ggdb3 -O0
-clogger_tests_LDADD = $(top_builddir)/src/clogger.o
+check_clogger_SOURCES = check_clogger.c
+check_clogger_CFLAGS = -I./../src -I./../include -ggdb3 -O0
+check_clogger_LDADD = $(top_builddir)/src/clogger.o
 
-TESTS = clogger_tests
+TESTS = check_clogger

@@ -22,6 +22,23 @@
 static int clogger_colorize  = 0;
 static int clogger_level = Info;
 
+const char* clogger_headers[] = {
+            "",
+            "[DEBUG]",
+            "[INFO ]",
+            "[WARN ]",
+            "[ERROR]",
+            "[FATAL]" };
+
+const char* clogger_colors[] = {
+        "",
+        "\033[1;32;48m",
+        "\033[1;34;48m",
+        "\033[1;33;48m",
+        "\033[1;35;48m",
+        "\033[1;31;48m" };
+
+
 void clogger_set_colorize()
 {
     clogger_colorize = 1;

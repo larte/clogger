@@ -26,6 +26,11 @@ AC_CONFIG_MACRO_DIRS([m4])
 # Checks for header files.
 AC_CHECK_HEADERS([string.h stdarg.h])
 
+AC_CHECK_HEADER(check.h,
+            [],
+            [AC_MSG_WARN([*** Couldn't find or include check.h. Unit tests won't work!])]
+            )
+
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_PID_T
 
