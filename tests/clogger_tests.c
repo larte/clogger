@@ -18,7 +18,6 @@ static char * test_clogger_levels() {
     LOG(Warn, "This is Warn");
     LOG(Error, "This is Error");
     LOG(Fatal, "This is Fatal");
-    //mu_assert("cache map initial size incorrect", c->max_size < 26);
     return NULL;
 }
 
@@ -28,7 +27,6 @@ static char * test_clogger_macros() {
     LOG_WARN("This is %d", Warn);
     LOG_ERROR("This is %d", Error);
     LOG_FATAL("This is %d", Fatal);
-    //mu_assert("cache map initial size incorrect", c->max_size < 26);
     return NULL;
 }
 

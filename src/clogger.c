@@ -19,17 +19,17 @@
 #include <stdlib.h>
 #include "stdarg.h"
 
-static int clogger_colors  = 0;
+static int clogger_colorize  = 0;
 static int clogger_level = Info;
 
 void clogger_set_colorize()
 {
-    clogger_colors = 1;
+    clogger_colorize = 1;
 }
 
 void clogger_unset_colorize()
 {
-    clogger_colors = 0;
+    clogger_colorize = 0;
 }
 
 void clogger_set_level(LogLevel level)
@@ -41,9 +41,9 @@ void clogger_set_level(LogLevel level)
 static void write_log_header(FILE *outputs, LogLevel level, char *file, int line)
 {
     fprintf(outputs, "%s%s%s",
-            CLOGGER_COLORS[clogger_colors * (int) level],
-            CLOGGER_HEADERS[level],
-            (clogger_colors == 0) ? " " : CLOGGER_RESET);
+            clogger_colors[clogger_colorize * (int) level],
+            clogger_headers[level],
+            (clogger_colorize == 0) ? " " : CLOGGER_RESET);
     if (level == Debug)
             fprintf(outputs, "%s:%d ", file, line);
 }

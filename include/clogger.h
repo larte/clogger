@@ -26,7 +26,7 @@ typedef enum{
     Fatal = 5
 }LogLevel;
 
-const char* CLOGGER_HEADERS[] = {
+const char* clogger_headers[] = {
             "",
             "[DEBUG]",
             "[INFO ]",
@@ -34,7 +34,7 @@ const char* CLOGGER_HEADERS[] = {
             "[ERROR]",
             "[FATAL]" };
 
-const char* CLOGGER_COLORS[] = {
+const char* clogger_colors[] = {
         "",
         "\033[1;32;48m",
         "\033[1;34;48m",
