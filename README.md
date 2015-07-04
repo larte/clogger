@@ -9,7 +9,7 @@ Defined logging macros for levels Debug, Info, Warn, Error and Fatal. The macros
 * Default level is INFO, Debug lines are omitted
 * FATAL logs are always printed. 
 * Debug level messages will include filename:line information
-
+* A file descriptor can be given with clogger_set_output(fd), but user must manage opening and closing.
 
 ## Installation
 
