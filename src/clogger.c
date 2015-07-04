@@ -21,6 +21,7 @@
 
 static int clogger_colorize  = 0;
 static int clogger_level = Info;
+FILE *clogger_output = 0;
 
 const char* clogger_headers[] = {
             "",
@@ -54,6 +55,11 @@ void clogger_set_level(LogLevel level)
     clogger_level = level;
 }
 
+void clogger_set_output(FILE *f)
+{
+    clogger_output = f;
+}
+
 
 static void write_log_header(FILE *outputs, LogLevel level, char *file, int line)
 {
@@ -68,7 +74,7 @@ static void write_log_header(FILE *outputs, LogLevel level, char *file, int line
 void clogger_log(int level, char *file, int line, const char *format, ...)
 {
 
-    FILE *outputs = ((level < Error) ? stdout : stderr);
+    FILE *outputs = (clogger_output != 0)? clogger_output : stdout;
     size_t size = 1024;
     int n;
     char *buffer, *tmp;
@@ -77,7 +83,6 @@ void clogger_log(int level, char *file, int line, const char *format, ...)
     if (level >= clogger_level) {
 
         write_log_header(outputs, level, file, line);
-
 
         if ((buffer = malloc(size)) == NULL)
             return;

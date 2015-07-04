@@ -33,6 +33,7 @@ typedef enum{
 void clogger_set_output(FILE *fd);
 
 void clogger_set_colorize();
+
 void clogger_unset_colorize();
 
 void clogger_set_level(LogLevel level);

@@ -34,3 +34,6 @@ tests/*_tests
 tests/*.log
 tests/*.trs
 m4/*
+tests/check_clogger
+test
+libtool

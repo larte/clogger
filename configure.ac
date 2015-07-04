@@ -22,7 +22,7 @@ AC_CONFIG_MACRO_DIRS([m4])
 # Checks for libraries.
 
 
-
+AM_PATH_CHECK(0.9.6,[],[])
 # Checks for header files.
 AC_CHECK_HEADERS([string.h stdarg.h])
 
